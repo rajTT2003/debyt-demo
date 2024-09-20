@@ -1,0 +1,20 @@
+/* Lock the content in portrait mode */
+@media screen and (orientation: landscape) {
+    body {
+      transform: rotate(-90deg); /* Rotate back to portrait */
+      transform-origin: left top; /* Adjust origin for rotation */
+      width: 100vh; /* Adjust width and height for the rotated content */
+      height: 100vw;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+  }
+  
+  /* Adjust for portrait mode */
+  @media screen and (orientation: portrait) {
+    body {
+      transform: rotate(0deg);
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  

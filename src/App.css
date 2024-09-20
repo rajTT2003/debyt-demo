@@ -1,0 +1,55 @@
+/* Prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  /* Ensure all containers fit within the viewport */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main app content should take full width and height */
+  .app-content {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Allow vertical scrolling */
+  body, .app-container {
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  /* Disable overscroll on mobile (prevents white space at the top and bottom) */
+  body {
+    overscroll-behavior-y: contain;
+  }
+  
+  /* SplashScreen, Navbar, Footer adjustments */
+  .splash-screen, .navbar, .footer {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .app-content {
+      padding: 0;
+    }
+  
+    .navbar, .footer, .outlet {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
